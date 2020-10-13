@@ -238,15 +238,12 @@ export const MainLayout = ({
               ) : null,
             ].filter(Boolean)}
             headerItems={[
-              { name: "Prev" },
-              { name: "Next" },
               state.annotationType !== "video"
                 ? null
                 : !state.videoPlaying
                 ? { name: "Play" }
                 : { name: "Pause" },
               !nextImageHasRegions && activeImage.regions && { name: "Clone" },
-              { name: "Settings" },
               state.fullScreen ? { name: "Window" } : { name: "Fullscreen" },
               { name: "Save" },
             ].filter(Boolean)}
